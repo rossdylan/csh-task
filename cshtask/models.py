@@ -12,7 +12,6 @@ from sqlalchemy.orm import (
     scoped_session,
     sessionmaker,
     relationship,
-    backref,
     )
 
 from zope.sqlalchemy import ZopeTransactionExtension

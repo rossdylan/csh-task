@@ -5,9 +5,9 @@ import util
 @view_config(route_name='index', renderer='index.mak')
 def index_view(request):
     user = util.get_user(request)
-    recent_tasks = util.get_recent_tasks()
+    users_tasks = util.get_assigned_tasks(user.id)
     return dict(
             title = "index",
             user = user,
-            r_tasks = recent_tasks,
+            u_tasks = users_tasks,
             )
