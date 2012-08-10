@@ -34,7 +34,7 @@ def get_assigned_tasks(user_id):
     """
 
     tasks = m.Task.query.filter_by(assigned_id=user_id)
-    return sorted(lambda t: t.id, tasks)
+    return sorted(tasks, key=lambda t: t.id)
 
 
 def get_recent_tasks():
@@ -43,10 +43,10 @@ def get_recent_tasks():
     """
     now = datetime.now()
     todays = sorted(
-                lambda t: t.id,
                 filter(
                     lambda dt: (now - dt).days < 1,
-                    m.Task.query.all()))
+                    m.Task.query.all()),
+                    lambda t: t.id)
     if len(todays) > 20:
         todays = todays[:20]
     # Needs optimising
