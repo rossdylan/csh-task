@@ -22,7 +22,7 @@
 					<div class="btn-group pull-right">
 						<a class="btn dropbown-toggle" href="#" data-toggle="dropdown">
 							<i class="icon-user"></i>
-							${username}
+							${user.username}
 							<span class="caret"> </span>
 						</a>
 						<ul class="dropdown-menu">
