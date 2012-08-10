@@ -51,7 +51,6 @@
 				</div>
 			</div>
 		</div>
-
-		${self.body}
+		${self.body()}
 	</body>
 </html>
