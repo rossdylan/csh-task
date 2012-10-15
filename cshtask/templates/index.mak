@@ -8,7 +8,7 @@
 					<li class="nav-header"> My Tasks </li>
 					% if len(u_tasks) == 0:
 						<li>
-							<b> No Tasks </b>
+							<b> You No Tasks </b>
 						</li>
 					% endif
 					% for task in u_tasks:
